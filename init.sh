@@ -1,6 +1,13 @@
-sudo unlink /etc/nginx/sites-enabled/default
+#!/bin/bash
+
+if [ -f /etc/nginx/sites-enabled/default ]; then
+  sudo rm /etc/nginx/sites-enabled/default
+fi
+
+#sudo unlink /etc/nginx/sites-enabled/default
 sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/test.conf
 sudo /etc/init.d/nginx restart
+
 sudo ln -sf /home/box/web/etc/gunicorn.conf /etc/gunicorn.d/test
 sudo ln -sf /home/box/web/etc/gunicorn_ask.conf /etc/gunicorn.d/ask
 #sudo ln -sf /home/box/web/hello.py /etc/gunicorn.d/hello.py
