@@ -7,6 +7,6 @@ mkdir web/uploads
 mkdir web/etc
 nano web/etc/nginx.conf
 
-sudo ln -sf /home/box/web/etc/nginx.conf /etc/ngonx/sites-enabled/test
+sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/test
 sudo rm -rf /etc/nginx/sites-enabled/default
 sudo /etc/init.d/nginx restart
