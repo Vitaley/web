@@ -11,9 +11,9 @@ sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/test
 sudo /etc/init.d/nginx restart
 
 # make hrdlink for unicorn config and restart gunicorn
-sudo ln -sf /home/box/web/etc/gunicorn_cfg.py /etc/gunicorn.d/test
+sudo ln -sf /home/box/web/etc/gunicorn_cfg.py /etc/gunicorn.d/gunicorn_cfg.py
 #sudo ln -sf /home/box/web/etc/gunicorn_ask.conf /etc/gunicorn.d/ask
 #sudo ln -sf /home/box/web/hello.py /etc/gunicorn.d/hello.py
-sudo /etc/init.d/gunicorn restart -c /etc/gunicorn.d/test hello:app
+sudo /etc/init.d/gunicorn restart -c /etc/gunicorn.d/gunicorn_cfg.py hello:app
 #gunicorn -b 0.0.0.0:8080 hello:app_me&
 #sudo /etc/init.d/mysql start
