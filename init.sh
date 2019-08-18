@@ -1,5 +1,4 @@
 #!/bin/bash
-cd web
 
 # remove old config for nginx
 if [ -f /etc/nginx/sites-enabled/default ]; then
