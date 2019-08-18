@@ -1,8 +1,9 @@
 #mode = 'wsgi'
-#working_dir = '/home/box/web'
+chdir = '/home/box/web'
 #python = '/usr/bin/python3'
 bind = '0.0.0.0:8080'
 #workers = 4
 #timeout = 60
-#log-level = 'debug'
+accesslog = '/home/box/web/guaccess.log'
+loglevel = 'debug' #debug, info, warning, error, critical
 #'hello:app', # application for unicorn
